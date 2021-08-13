@@ -1,4 +1,4 @@
-// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
+﻿// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 #include "VlcMediaPlayer.h"
 #include "VlcMediaPrivate.h"
@@ -254,12 +254,17 @@ FString FVlcMediaPlayer::GetInfo() const
 	return Info;
 }
 
-
-FName FVlcMediaPlayer::GetPlayerName() const
+FGuid FVlcMediaPlayer::GetPlayerPluginGUID() const
 {
-	static FName PlayerName(TEXT("VlcMedia"));
-	return PlayerName;
+	static FGuid PlayerPluginGUID(0x94f59418, 0xb93d4f40, 0xa441b4fd, 0x2ac7c313);
+	return PlayerPluginGUID;
 }
+
+//FName FVlcMediaPlayer::GetPlayerName() const
+//{
+//	static FName PlayerName(TEXT("VlcMedia"));
+//	return PlayerName;
+//}
 
 
 IMediaSamples& FVlcMediaPlayer::GetSamples()

@@ -1,4 +1,4 @@
-// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
+﻿// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 #include "Containers/Array.h"
 #include "Containers/UnrealString.h"
@@ -106,6 +106,12 @@ public:
 	{
 		static FName PlayerName(TEXT("VlcMedia"));
 		return PlayerName;
+	}
+
+	virtual FGuid GetPlayerPluginGUID() const override
+	{
+		static FGuid PlayerPluginGUID(0x94f59418, 0xb93d4f40, 0xa441b4fd, 0x2ac7c313);
+		return PlayerPluginGUID;
 	}
 
 	virtual const TArray<FString>& GetSupportedPlatforms() const override

@@ -1,4 +1,4 @@
-// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
+﻿// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 using System.IO;
 
@@ -61,11 +61,11 @@ namespace UnrealBuildTool.Rules
 				RuntimeDependencies.Add(Path.Combine(VlcDirectory, "libvlccore.dylib"));
 				RuntimeDependencies.Add(Path.Combine(VlcDirectory, "libvlccore.9.dylib"));
 			}
-			else if (Target.Platform == UnrealTargetPlatform.Win32)
-			{
-				RuntimeDependencies.Add(Path.Combine(VlcDirectory, "libvlc.dll"));
-				RuntimeDependencies.Add(Path.Combine(VlcDirectory, "libvlccore.dll"));
-			}
+			//else if (Target.Platform == UnrealTargetPlatform.Win32)
+			//{
+			//	RuntimeDependencies.Add(Path.Combine(VlcDirectory, "libvlc.dll"));
+			//	RuntimeDependencies.Add(Path.Combine(VlcDirectory, "libvlccore.dll"));
+			//}
 			else if (Target.Platform == UnrealTargetPlatform.Win64)
 			{
 				RuntimeDependencies.Add(Path.Combine(VlcDirectory, "libvlc.dll"));
